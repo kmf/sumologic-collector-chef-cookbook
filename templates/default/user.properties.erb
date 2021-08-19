@@ -21,7 +21,7 @@ proxyPassword=<%= @resource.proxy_password %>
 <%= "proxyNtlmDomain=#{@resource.proxy_ntlmdomain}" unless @resource.proxy_ntlmdomain.nil? %>
 <% end %>
 # Other Settings
-name=<%= @resource.collector_name %>
+name=<%= node['node_name'] %>
 <%= "hostName=#{@resource.host_name}" unless @resource.host_name.nil? %>
 <%= "description=#{@resource.description}" unless @resource.description.nil? %>
 <%= "category=#{@resource.category}" unless @resource.category.nil? %>

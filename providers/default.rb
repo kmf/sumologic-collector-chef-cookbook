@@ -44,7 +44,7 @@ action :configure do
       source 'user.properties.erb'
       cookbook 'sumologic-collector'
       variables resource: new_resource
-      sensitive true
+      sensitive false
       unless new_resource.skip_restart
         notifies :configure, new_resource unless ::File.exist?(::File.join(new_resource.dir, 'data'))
         notifies :restart, new_resource
